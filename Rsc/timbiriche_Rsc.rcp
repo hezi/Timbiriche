@@ -1,0 +1,622 @@
+
+// FILENAME               : Timbiriche.prc
+// RESOURCE DATABASE NAME : Timbiriche
+
+
+// --------------- File informations ---------------
+
+//Name               : Timbiriche
+//Version            : 0
+//Attributes         : ResDB Backup 
+//CreationDate       : 1116301091
+//ModificationDate   : 1116391299
+//LastBackupDate     : 0
+//ModificationNumber : 200
+//AppInfoID          : 0
+//SortInfoID         : 0
+//Type               : appl
+//Creator            : Tche
+//UniqueIDSeed       : 0
+
+
+// --------------- Resources of type 'MBAR' id 1000 ---------------
+GENERATEHEADER "timbiriche_Rsc.h"
+
+MENU ID 1000
+BEGIN
+    PULLDOWN "Opciones"
+    BEGIN
+        MENUITEM "Nueva Partida" ID 1000 "N"
+        MENUITEM "Preferencias..." ID 1005 "P"
+        MENUITEM "C\xF3mo Jugar..." ID 1006 "C"
+        MENUITEM SEPARATOR
+        MENUITEM "Acerca de Timbiriche" ID 1004
+    END
+END
+
+
+// --------------- Resources of type 'Talt' id 1100 ---------------
+
+ALERT ID 1100
+HELPID 0
+DEFAULTBUTTON 0
+ERROR
+BEGIN
+    TITLE
+        "Lo sentimos"
+    MESSAGE
+        "Este programa requiere que la versi\xF3n del sistema operativo sea 3.5 o superior."
+    BUTTONS
+        "Salir"
+END
+
+
+// --------------- Resources of type 'tFRM' id 1000 ---------------
+
+FORM ID 1000 AT (0 0 160 160) USABLE SAVEBEHIND FRAME 
+MENUID 1000
+BEGIN
+    TITLE "Timbiriche"
+    PUSHBUTTON "1: 00" ID 1800 AT (60 1 24 10) USABLE DISABLED RIGHTANCHOR FONT 0 GROUP 1 
+    PUSHBUTTON "2: 00" ID 1801 AT (85 1 24 10) USABLE DISABLED RIGHTANCHOR FONT 0 GROUP 1 
+    PUSHBUTTON "3: 00" ID 1802 AT (110 1 24 10) USABLE DISABLED RIGHTANCHOR FONT 0 GROUP 1 
+    PUSHBUTTON "4: 00" ID 1803 AT (135 1 24 10) USABLE DISABLED RIGHTANCHOR FONT 0 GROUP 1 
+    BUTTON "Nueva Partida" ID 1900 AT (1 147 66 12) NONUSABLE RIGHTANCHOR FRAME FONT 0
+END
+
+
+// --------------- Resources of type 'tSTR' id 1003 ---------------
+
+STRING ID 1003 "Nueva Partida"
+
+
+// --------------- Resources of type 'tFRM' id 1003 ---------------
+
+FORM ID 1003 AT (2 2 156 156) USABLE MODAL SAVEBEHIND FRAME 
+BEGIN
+    TITLE "Acerca de Timbiriche"
+    FORMBITMAP AT (-1 16) BITMAP 1900 USABLE
+    LABEL "Timbiriche" ID 1000  AT (32 14) USABLE FONT 2
+    LABEL "v.0.0.1a" ID 1001  AT (32 28) USABLE FONT 1
+    LABEL "Copyright \xA9 2004-2005" ID 1002  AT (32 40) USABLE FONT 0
+    LABEL "Gonzalo Mena Mendoza" ID 1003  AT (32 52) USABLE FONT 0
+    LABEL "gonzalo@mena.com.mx" ID 1004  AT (32 64) USABLE FONT 0
+    LABEL "http://mena.com.mx" ID 1005  AT (32 76) USABLE FONT 0
+    BUTTON "Cr\xE9ditos..." ID 1010 AT (55 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "Licencia..." ID 1011 AT (106 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "Aceptar" ID 1100 AT (4 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    LABEL "Para Gaby, Mari y Marce." ID 1006  AT (32 100) USABLE FONT 0
+END
+
+
+// --------------- Resources of type 'tSTR' id 1000 ---------------
+
+STRING ID 1000 "%i: %i"
+
+
+// --------------- Resources of type 'Talt' id 1011 ---------------
+
+ALERT ID 1011
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "\xA1Felicidades!"
+    MESSAGE
+        "El jugador #^1 gan\xF3 la partida."
+    BUTTONS
+        "Aceptar"
+END
+
+
+// --------------- Resources of type 'Talt' id 1012 ---------------
+
+ALERT ID 1012
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "\xA1Felicidades!"
+    MESSAGE
+        "Los jugadores #^1 y #^2 est\xE1n empatados en primer lugar."
+    BUTTONS
+        "Aceptar"
+END
+
+
+// --------------- Resources of type 'Talt' id 1013 ---------------
+
+ALERT ID 1013
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "\xA1Felicidades!"
+    MESSAGE
+        "Los jugadores #^1, #^2 y #^3 est\xE1n empatados en primer lugar."
+    BUTTONS
+        "Aceptar"
+END
+
+
+// --------------- Resources of type 'Talt' id 1014 ---------------
+
+ALERT ID 1014
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "\xA1Felicidades!"
+    MESSAGE
+        "Todos los jugadores est\xE1n empatados."
+    BUTTONS
+        "Aceptar"
+END
+
+
+// --------------- Resources of type 'MBAR' id 2000 ---------------
+
+MENU ID 2000
+BEGIN
+    PULLDOWN "Options"
+    BEGIN
+        MENUITEM "New Game" ID 1000 "N"
+        MENUITEM "Preferences..." ID 1005 "P"
+        MENUITEM "How to Play..." ID 1006 "H"
+        MENUITEM SEPARATOR
+        MENUITEM "About Timbiriche" ID 1004
+    END
+END
+
+
+// --------------- Resources of type 'Talt' id 2011 ---------------
+
+ALERT ID 2011
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "Congratulations!"
+    MESSAGE
+        "Player #^1 has won the game."
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'Talt' id 2012 ---------------
+
+ALERT ID 2012
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "Congratulations!"
+    MESSAGE
+        "Players #^1 and #^2 are tied in first place."
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'Talt' id 2013 ---------------
+
+ALERT ID 2013
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "Congratulations!"
+    MESSAGE
+        "Players #^1, #^2 and #^3 are tied in first place."
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'Talt' id 2014 ---------------
+
+ALERT ID 2014
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "Congratulations!"
+    MESSAGE
+        "All players are tied."
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'Talt' id 2100 ---------------
+
+ALERT ID 2100
+HELPID 0
+DEFAULTBUTTON 0
+ERROR
+BEGIN
+    TITLE
+        "We are sorry"
+    MESSAGE
+        "This program requires the operating system to be version 3.5 or higher."
+    BUTTONS
+        "Exit"
+END
+
+
+// --------------- Resources of type 'Talt' id 3011 ---------------
+
+ALERT ID 3011
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "Parab\xE9ns !"
+    MESSAGE
+        "O jogador No.^1 ganhou a partida."
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'Talt' id 3012 ---------------
+
+ALERT ID 3012
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "Parab\xE9ns !"
+    MESSAGE
+        "Os jogadores Nos.^1 e ^2 est\xE3o empatados em primeiro lugar."
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'Talt' id 3013 ---------------
+
+ALERT ID 3013
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "Parab\xE9ns !"
+    MESSAGE
+        "Os jogadores Nos.^1, ^2 e ^3 est\xE3o empatados em primeiro lugar."
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'Talt' id 3014 ---------------
+
+ALERT ID 3014
+HELPID 0
+DEFAULTBUTTON 0
+INFORMATION
+BEGIN
+    TITLE
+        "Parab\xE9ns !"
+    MESSAGE
+        "Todos os jogadores est\xE3o empatados."
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'Talt' id 3100 ---------------
+
+ALERT ID 3100
+HELPID 0
+DEFAULTBUTTON 0
+ERROR
+BEGIN
+    TITLE
+        "Sinto muito !"
+    MESSAGE
+        "Este programa requer que a vers\xE3o do sistema operacional seja 3.5 ou superior."
+    BUTTONS
+        "Sair"
+END
+
+
+// --------------- Resources of type 'MBAR' id 3000 ---------------
+
+MENU ID 3000
+BEGIN
+    PULLDOWN "Op\xE7\xF5es"
+    BEGIN
+        MENUITEM "Nova Partida" ID 1000 "N"
+        MENUITEM "Prefer\xEAncias..." ID 1005 "P"
+        MENUITEM "Como Jogar..." ID 1006 "C"
+        MENUITEM SEPARATOR
+        MENUITEM "A respeito de Timbiriche" ID 1004
+    END
+END
+
+
+// --------------- Resources of type 'tSTR' id 2003 ---------------
+
+STRING ID 2003 "New Game"
+
+
+// --------------- Resources of type 'tSTR' id 3003 ---------------
+
+STRING ID 3003 "Nova Partida"
+
+
+// --------------- Resources of type 'tFRM' id 2003 ---------------
+
+FORM ID 2003 AT (2 2 156 156) USABLE MODAL SAVEBEHIND FRAME 
+BEGIN
+    TITLE "About Timbiriche"
+    FORMBITMAP AT (-1 16) BITMAP 1900 USABLE
+    LABEL "Timbiriche" ID 1000  AT (32 14) USABLE FONT 2
+    LABEL "v.0.0.1a" ID 1001  AT (32 28) USABLE FONT 1
+    LABEL "Copyright \xA9 2004-2005" ID 1002  AT (32 40) USABLE FONT 0
+    LABEL "Gonzalo Mena-Mendoza" ID 1003  AT (32 52) USABLE FONT 0
+    LABEL "gonzalo@mena.com.mx" ID 1004  AT (32 64) USABLE FONT 0
+    LABEL "http://mena.com.mx" ID 1005  AT (32 76) USABLE FONT 0
+    BUTTON "Credits..." ID 1010 AT (55 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "License..." ID 1011 AT (106 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "OK" ID 1100 AT (4 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    LABEL "For Gaby, Mari & Marce." ID 1006  AT (32 100) USABLE FONT 0
+END
+
+
+// --------------- Resources of type 'tFRM' id 3003 ---------------
+
+FORM ID 3003 AT (2 2 156 156) USABLE MODAL SAVEBEHIND FRAME 
+BEGIN
+    TITLE "A respeito de Timbiriche"
+    FORMBITMAP AT (-1 16) BITMAP 1900 USABLE
+    LABEL "Timbiriche" ID 1000  AT (32 14) USABLE FONT 2
+    LABEL "v.0.0.1a" ID 1001  AT (32 28) USABLE FONT 1
+    LABEL "Copyright \xA9 2004-2005" ID 1002  AT (32 40) USABLE FONT 0
+    LABEL "Gonzalo Mena Mendoza" ID 1003  AT (32 52) USABLE FONT 0
+    LABEL "gonzalo@mena.com.mx" ID 1004  AT (32 64) USABLE FONT 0
+    LABEL "http://mena.com.mx" ID 1005  AT (32 76) USABLE FONT 0
+    BUTTON "Cr\xE9ditos..." ID 1010 AT (55 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "Licen\xE7a..." ID 1011 AT (106 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "OK" ID 1100 AT (4 140 46 12) USABLE RIGHTANCHOR FRAME FONT 0
+    LABEL "Para Gaby, Mari e Marce." ID 1006  AT (32 100) USABLE FONT 0
+END
+
+
+// --------------- Resources of type 'tSTR' id 1001 ---------------
+
+STRING ID 1001 "Traducci\xF3n al portugu\xE9s:\n\tBrabol\n\twww.palmaniacos.com\nDise\xF1o y programaci\xF3n:\n\tGonzalo Mena-Mendoza\n\nHerramientas usadas para desarrollar este juego:\n\tOnBoardC\t    RsrcEdit"
+
+
+// --------------- Resources of type 'tSTR' id 2001 ---------------
+
+STRING ID 2001 "Portuguese translation:\n\tBrabol\n\twww.palmaniacos.com\nDesign and programming:\n\tGonzalo Mena-Mendoza\n\nTools used to develop this game:\n\tOnBoardC\t    RsrcEdit"
+
+
+// --------------- Resources of type 'tSTR' id 3001 ---------------
+
+STRING ID 3001 "Tradu\xE7\xE3o para o portugu\xEAs:\n\tBrabol\n\twww.palmaniacos.com\nProjeto e programa\xE7\xE3o:\n\tGonzalo Mena-Mendoza\n\nFerramentas utilizadas para desenvolver este jogo:\n\tOnBoardC\t    RsrcEdit"
+
+
+// --------------- Resources of type 'tSTR' id 2004 ---------------
+
+STRING ID 2004 "Timbiriche is the mexican name of the Dots-and-Boxes pencil and paper game for two or more players.\n\nStarting with an empty grid of dots, players take turns to add a single horizontal or vertical line between two unjoined adjacent dots. A player who completes the fourth side of a 1 by 1 box writes their initial in the box just completed and takes another turn.\n\nThe game ends when no more lines can be placed. The winner of the game is the player with the most boxes."
+
+
+// --------------- Resources of type 'tSTR' id 1004 ---------------
+
+STRING ID 1004 "Timbiriche puede jugarse por dos o m\xE1s jugadores.\n\nSe comienza con una cuadr\xEDcula de puntos vac\xEDa. Los jugadores van tomando turnos para a\xF1adir una l\xEDnea horizontal o vertical entre dos puntos adyacentes a\xFAn no unidos. El jugador que completa el cuarto lado de un cuadro de 1 por 1 escribe su inicial en dicho cuadro y juega nuevamente.\n\nEl juego termina cuando no pueden agregarse m\xE1s l\xEDneas. El ganador es el jugador con el mayor n\xFAmero de cuadros."
+
+
+// --------------- Resources of type 'tSTR' id 3004 ---------------
+
+STRING ID 3004 "Timbiriche \xE9 o nome mexicano do jogo (com l\xE1pis e papel) de Pontos e Linhas para formar Caixas.\n\nCome\xE7ando com uma grade vazia de pontos, os jogadores v\xE3o adicionando uma linha horizontal ou vertical por vez entre dois pontos adjacentes ainda n\xE3o ligados. O jogador que fechar uma caixa de 1 x 1 ter\xE1 seu n\xFAmero inscrito no interior da caixa, e o direito a uma outra jogada sucessiva.\n\nO jogo termina quando n\xE3o existem mais linhas a serem colocadas. O vencedor do jogo \xE9 o jogador com o maior n\xFAmero de caixas fechadas."
+
+
+// --------------- Resources of type 'Talt' id 1101 ---------------
+
+ALERT ID 1101
+HELPID 0
+DEFAULTBUTTON 0
+WARNING
+BEGIN
+    TITLE
+        "Debug"
+    MESSAGE
+        "1: ^1\n" \
+            "2: ^2\n" \
+            "3: ^3"
+    BUTTONS
+        "OK"
+END
+
+
+// --------------- Resources of type 'tFRM' id 1002 ---------------
+
+FORM ID 1002 AT (1 1 158 158) USABLE MODAL SAVEBEHIND FRAME 
+BEGIN
+    TITLE "Preferencias"
+    LABEL "N\xFAm. Jugadores:" ID 1010  AT (4 16) USABLE FONT 0
+    LABEL "1er. Jugador:" ID 1020  AT (16 31) USABLE FONT 0
+    BUTTON "Aceptar" ID 1900 AT (4 142 40 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "Cancelar" ID 1901 AT (49 142 40 12) USABLE RIGHTANCHOR FRAME FONT 0
+    PUSHBUTTON "2" ID 1100 AT (75 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    PUSHBUTTON "3" ID 1101 AT (101 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    PUSHBUTTON "4" ID 1102 AT (127 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    LABEL "2do. Jugador:" ID 1030  AT (16 46) USABLE FONT 0
+    LABEL "3er. Jugador:" ID 1040  AT (16 61) USABLE FONT 0
+    LABEL "4to. Jugador:" ID 1050  AT (16 76) USABLE FONT 0
+    LABEL "Columnas:" ID 1060  AT (4 94) USABLE FONT 0
+    LABEL "Filas:" ID 1070  AT (4 109) USABLE FONT 0
+    POPUPTRIGGER "Humano" ID 1200 AT (75 31 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Humano" ID 1210 AT (75 46 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Humano" ID 1220 AT (75 61 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Humano" ID 1230 AT (75 76 80 12) USABLE LEFTANCHOR FONT 0 
+    LIST "Humano" "Robot F\xE1cil" "Robot Medio" ID 1201 AT (75 31 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Humano" "Robot F\xE1cil" "Robot Medio" ID 1211 AT (75 46 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Humano" "Robot F\xE1cil" "Robot Medio" ID 1221 AT (75 61 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Humano" "Robot F\xE1cil" "Robot Medio" ID 1231 AT (75 76 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    POPUPLIST ID 1200 1201
+    POPUPLIST ID 1210 1211
+    POPUPLIST ID 1220 1221
+    POPUPLIST ID 1230 1231
+    POPUPTRIGGER "10" ID 1300 AT (75 94 32 12) USABLE LEFTANCHOR FONT 2 
+    POPUPTRIGGER "9" ID 1310 AT (75 109 32 12) USABLE LEFTANCHOR FONT 2 
+    LIST "3" "4" "5" "6" "7" "8" "9" "10" ID 1301 AT (75 67 32 88) NONUSABLE DISABLED VISIBLEITEMS 8 FONT 0
+    LIST "3" "4" "5" "6" "7" "8" "9" ID 1311 AT (75 78 32 77) NONUSABLE DISABLED VISIBLEITEMS 7 FONT 0
+    POPUPLIST ID 1300 1301
+    POPUPLIST ID 1310 1311
+    POPUPTRIGGER "Espa\xF1ol" ID 1400 AT (75 124 80 12) USABLE LEFTANCHOR FONT 0 
+    LIST "Espa\xF1ol" "English" "Portugu\xEAs" ID 1401 AT (75 121 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    POPUPLIST ID 1400 1401
+    LABEL "Idioma:" ID 1080  AT (4 124) USABLE FONT 0
+END
+
+
+// --------------- Resources of type 'tFRM' id 1001 ---------------
+
+FORM ID 1001 AT (1 83 158 76) USABLE MODAL SAVEBEHIND FRAME 
+BEGIN
+    TITLE "Idioma/Language"
+    BUTTON "Espa\xF1ol" ID 1000 AT (36 17 80 14) USABLE RIGHTANCHOR FRAME FONT 2
+    BUTTON "English" ID 2000 AT (36 37 80 14) USABLE RIGHTANCHOR FRAME FONT 2
+    BUTTON "Portugu\xEAs" ID 3000 AT (36 57 80 14) USABLE RIGHTANCHOR FRAME FONT 2
+END
+
+
+// --------------- Resources of type 'tFRM' id 2002 ---------------
+
+FORM ID 2002 AT (1 1 158 158) USABLE MODAL SAVEBEHIND FRAME 
+BEGIN
+    TITLE "Preferences"
+    LABEL "Num. Players:" ID 1010  AT (4 16) USABLE FONT 0
+    LABEL "1st. Player:" ID 1020  AT (16 31) USABLE FONT 0
+    BUTTON "OK" ID 1900 AT (4 142 40 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "Cancel" ID 1901 AT (49 142 40 12) USABLE RIGHTANCHOR FRAME FONT 0
+    PUSHBUTTON "2" ID 1100 AT (75 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    PUSHBUTTON "3" ID 1101 AT (101 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    PUSHBUTTON "4" ID 1102 AT (127 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    LABEL "2nd. Player:" ID 1030  AT (16 46) USABLE FONT 0
+    LABEL "3rd. Player:" ID 1040  AT (16 61) USABLE FONT 0
+    LABEL "4th. Player:" ID 1050  AT (16 76) USABLE FONT 0
+    LABEL "Columns:" ID 1060  AT (4 94) USABLE FONT 0
+    LABEL "Rows:" ID 1070  AT (4 109) USABLE FONT 0
+    POPUPTRIGGER "Human" ID 1200 AT (75 31 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Human" ID 1210 AT (75 46 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Human" ID 1220 AT (75 61 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Human" ID 1230 AT (75 76 80 12) USABLE LEFTANCHOR FONT 0 
+    LIST "Human" "Robot Easy" "Robot Medium" ID 1201 AT (75 31 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Human" "Robot Easy" "Robot Medium" ID 1211 AT (75 46 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Human" "Robot Easy" "Robot Medium" ID 1221 AT (75 61 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Human" "Robot Easy" "Robot Medium" ID 1231 AT (75 76 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    POPUPLIST ID 1200 1201
+    POPUPLIST ID 1210 1211
+    POPUPLIST ID 1220 1221
+    POPUPLIST ID 1230 1231
+    POPUPTRIGGER "10" ID 1300 AT (75 94 32 12) USABLE LEFTANCHOR FONT 2 
+    POPUPTRIGGER "9" ID 1310 AT (75 109 32 12) USABLE LEFTANCHOR FONT 2 
+    LIST "3" "4" "5" "6" "7" "8" "9" "10" ID 1301 AT (75 67 32 88) NONUSABLE DISABLED VISIBLEITEMS 8 FONT 0
+    LIST "3" "4" "5" "6" "7" "8" "9" ID 1311 AT (75 78 32 77) NONUSABLE DISABLED VISIBLEITEMS 7 FONT 0
+    POPUPLIST ID 1300 1301
+    POPUPLIST ID 1310 1311
+    POPUPTRIGGER "Espa\xF1ol" ID 1400 AT (75 124 80 12) USABLE LEFTANCHOR FONT 0 
+    LIST "Espa\xF1ol" "English" "Portugu\xEAs" ID 1401 AT (75 121 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    POPUPLIST ID 1400 1401
+    LABEL "Language:" ID 1080  AT (4 124) USABLE FONT 0
+END
+
+
+// --------------- Resources of type 'tFRM' id 3002 ---------------
+
+FORM ID 3002 AT (1 1 158 158) USABLE MODAL SAVEBEHIND FRAME 
+BEGIN
+    TITLE "Preferências"
+    LABEL "N\xFAm. Jogadores:" ID 1010  AT (4 16) USABLE FONT 0
+    LABEL "1er. Jogador:" ID 1020  AT (16 31) USABLE FONT 0
+    BUTTON "OK" ID 1900 AT (4 142 40 12) USABLE RIGHTANCHOR FRAME FONT 0
+    BUTTON "Cancelar" ID 1901 AT (49 142 40 12) USABLE RIGHTANCHOR FRAME FONT 0
+    PUSHBUTTON "2" ID 1100 AT (75 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    PUSHBUTTON "3" ID 1101 AT (101 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    PUSHBUTTON "4" ID 1102 AT (127 16 25 12) USABLE RIGHTANCHOR FONT 2 GROUP 1 
+    LABEL "2do. Jogador:" ID 1030  AT (16 46) USABLE FONT 0
+    LABEL "3er. Jogador:" ID 1040  AT (16 61) USABLE FONT 0
+    LABEL "4to. Jogador:" ID 1050  AT (16 76) USABLE FONT 0
+    LABEL "Colunas:" ID 1060  AT (4 94) USABLE FONT 0
+    LABEL "Filas:" ID 1070  AT (4 109) USABLE FONT 0
+    POPUPTRIGGER "Humano" ID 1200 AT (75 31 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Humano" ID 1210 AT (75 46 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Humano" ID 1220 AT (75 61 80 12) USABLE LEFTANCHOR FONT 0 
+    POPUPTRIGGER "Humano" ID 1230 AT (75 76 80 12) USABLE LEFTANCHOR FONT 0 
+    LIST "Humano" "Rob\xF4 F\xE1cil" "Rob\xF4 Meio" ID 1201 AT (75 31 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Humano" "Rob\xF4 F\xE1cil" "Rob\xF4 Meio" ID 1211 AT (75 46 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Humano" "Rob\xF4 F\xE1cil" "Rob\xF4 Meio" ID 1221 AT (75 61 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    LIST "Humano" "Rob\xF4 F\xE1cil" "Rob\xF4 Meio" ID 1231 AT (75 76 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    POPUPLIST ID 1200 1201
+    POPUPLIST ID 1210 1211
+    POPUPLIST ID 1220 1221
+    POPUPLIST ID 1230 1231
+    POPUPTRIGGER "10" ID 1300 AT (75 94 32 12) USABLE LEFTANCHOR FONT 2 
+    POPUPTRIGGER "9" ID 1310 AT (75 109 32 12) USABLE LEFTANCHOR FONT 2 
+    LIST "3" "4" "5" "6" "7" "8" "9" "10" ID 1301 AT (75 67 32 88) NONUSABLE DISABLED VISIBLEITEMS 8 FONT 0
+    LIST "3" "4" "5" "6" "7" "8" "9" ID 1311 AT (75 78 32 77) NONUSABLE DISABLED VISIBLEITEMS 7 FONT 0
+    POPUPLIST ID 1300 1301
+    POPUPLIST ID 1310 1311
+    POPUPTRIGGER "Espa\xF1ol" ID 1400 AT (75 124 80 12) USABLE LEFTANCHOR FONT 0 
+    LIST "Espa\xF1ol" "English" "Portugu\xEAs" ID 1401 AT (75 121 80 34) NONUSABLE DISABLED VISIBLEITEMS 3 FONT 0
+    POPUPLIST ID 1400 1401
+    LABEL "Idioma:" ID 1080  AT (4 124) USABLE FONT 0
+END
+
+
+// --------------- Resources of type 'tver' id 1 ---------------
+
+VERSION ID 1 "1.2.5"
+
+
+// --------------- Resources of type 'tSTR' id 4900 ---------------
+
+STRING ID 4900 "LIZENZ\n\nDieses Programm ist freie Software.  Sie k\xF6nnen es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation ver\xF6ffentlicht, weitergeben und/oder ver\xE4ndern, entweder gem\xE4\xDF  Version 2 der Lizenz oder (nach Ihrer Option) jeder sp\xE4teren Version.\n\nDie Ver\xF6ffentlichung dieses Programs erfogt in der Hoffnung , dass es Ihnen von Nutzen sein wird  aber OHNE JEDE GARANTIE; sogar ohne die implizierte Garantie der MARKTREIFE oder der VERWENDBARKEIT F\xDCR EINEN BESTIMMTEN ZWECK. Lesen Sie die GNU General Public Lizenz f\xFCr weitere Informationen. \n\nSie sollten eine Kopie der GNU General Public Lizenz mit diesem Program erhalten haben; falls nicht, finden sie sie hier:\n\nhttp://www.gnu.org/copyleft/gpl.html\n"
+
+
+// --------------- Resources of type 'tSTR' id 3900 ---------------
+
+STRING ID 3900 "LICEN\xC7A\n\nEste programa \xE9 software livre; voc\xEA pode distribu\xED-lo e/ou modific\xE1-lo sob os termos da Licen\xE7a P\xFAblica Geral GNU (GPL) tal como foi publicada pela Funda\xE7\xE3o para o Software Livre; seja a vers\xE3o 2 dessa Licen\xE7a, ou (\xE0 sua conveni\xEAncia) qualquer vers\xE3o posterior.\n\nEste programa \xE9 distribu\xEDdo na esperan\xE7a de ser \xFAtil, por\xE9m, SEM QUALQUER GARANTIA; nem sequer a garantia impl\xEDcita de COMERCIALIZA\xC7\xC3O ou de APTID\xC3O PARA UM PROP\xD3SITO ESPEC\xCDFICO. Consulte a GPL para maiores detalhes.\n\nVoc\xEA deve ter recebido uma c\xF3pia da Licen\xE7a P\xFAblica Geral GNU junto com este programa; caso isso n\xE3o tenha acontecido, voc\xE9 poder\xE1 obter uma c\xF3pia em:\n\nhttp://www.gnu.org/copyleft/gpl.html\n"
+
+
+// --------------- Resources of type 'tSTR' id 5900 ---------------
+
+STRING ID 5900 "LLIC\xC8NCIA\n\nAquest programa \xE9s programari lliure; pot distribu\xEFr-lo i/o modificar-lo sota els termes de la Llic\xE8ncia P\xFAblica General GNU (GPL) com ha sigut publicada per la Fundaci\xF3 pel Programari Lliure; ja sigui la versi\xF3 2 de la Llic\xE8ncia, o (segons convingui) qualsevol versi\xF3 posterior.\n\nAquest programa \xE9s distrib\xFCit amb l'esperan\xE7a de ser \xFAtil, per\xF2 SENSE CAP GARANTIA; sense tan sols la garantia implicita de COMERCIALIZACI\xD3\n o d'APTITUD PER UN PROP\xD2SIT ESPEC\xCDFIC. Consulti la GPL per a m\xE9s detalls.\nVost\xE8 ha tingut que rebre una c\xF2pia de la Llicencia P\xFAblica General GNU juntament amb aquest programa; si no, la trobar\xE0 a:\n\nhttp://www.gnu.org/copyleft/gpl.html\n"
+
+
+// --------------- Resources of type 'tSTR' id 2900 ---------------
+
+STRING ID 2900 "LICENSE\n\nThis program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program; if not, find it at:\n\nhttp://www.gnu.org/copyleft/gpl.html\n"
+
+
+// --------------- Resources of type 'tSTR' id 6900 ---------------
+
+STRING ID 6900 "LICENCE\n\nCe programme est un logiciel libre ; vous pouvez le redistribuer et/ou le modifier conform\xE9ment aux dispositions de la Licence Publique G\xE9n\xE9rale GNU, telle que publi\xE9e par la Free Software Foundation ; version 2 de la licence, ou encore (\xE0 votre choix) toute version ult\xE9rieure.\n\nCe programme est distridu\xE9 dans l'espoir qu'il sera utile, mais SANS AUCUNE GARANTIE ; sans m\xEAme la garantie implicite de COMMERCIALISATION ou D'ADAPTATION A UN OBJECT PARTICULIER. Pour plus de d\xE9tail, voir la Licence Publique G\xE9n\xE9rale GNU.\n\nVous devez avoir re\xE7u un exemplaire de la Licence Publique G\xE9n\xE9rale GNU en m\xEAme temps que ce programme ; si ce n'est pas le cas, trouvez-l'\xE0:\n\nhttp://www.gnu.org/copyleft/gpl.html\n"
+
+
+// --------------- Resources of type 'tSTR' id 7900 ---------------
+
+STRING ID 7900 "LICENZA\n\nQuesto programma \xE8 Software Libero; Puoi ridistribuirlo e/o modificarlo rispettando i termini della Licenza Pubblica Generale GNU (GPL) cos\xEC come pubblicata dalla Free Software Foundation; sia la Versione 2 della Licenza, che (a tua scelta) ogni versione successiva.\n\nQuesto programma viene distribuito con la speranza che ti sia utile, ma SENZA ALCUNA GARANZIA; senza inoltre la implicita garanzia di COMMERCIABILIT\xE0 o D'ADATTAMENTO AD UN PARTICOLARE SCOPO. Per maggiori dettagli si veda la Licenza Pubblica Generale GNU (GPL).\n\nDovresti aver ricevuto una copia della Licenza Pubblica Generale GNU (GPL) insieme a questo programma; altrimenti, puoi trovarla qui:\n\nhttp://www.gnu.org/copyleft/gpl.html"
+
+
+// --------------- Resources of type 'tSTR' id 1900 ---------------
+
+STRING ID 1900 "LICENCIA\n\nEste programa es software libre; puede distribuirlo y/o modificarlo bajo los t\xE9rminos de la Licencia P\xFAblica General GNU (GPL) como ha sido publicada por la Fundaci\xF3n para el Software Libre; ya sea la versi\xF3n 2 de la Licencia, o (a su conveniencia) cualquier versi\xF3n posterior.\n\nEste programa es distribuido con la esperanza de ser \xFAtil, pero SIN GARANT\xCDA ALGUNA; sin siquiera la garant\xEDa impl\xEDcita de COMERCIALIZACI\xD3N o de APTITUD PARA UN PROP\xD3SITO ESPEC\xCDFICO. Consulte la GPL para mayores detalles.\n\nUsted debe haber recibido una copia de la Licencia P\xFAblica General GNU junto con este programa; si no, la encontrar\xE1 en:\n\nhttp://www.gnu.org/copyleft/gpl.html\n"
+
